@@ -1,0 +1,690 @@
+class LangData {
+  String? name;
+  String? engName;
+  String? image;
+  bool? current;
+  int? id;
+  LangData({this.name, this.engName, this.image, this.current, this.id});
+}
+
+class Lang {
+  static var english = 1;
+  static var german = 2;
+  static var espanol = 3;
+  static var igbo = 4;
+  static var yoruba = 5;
+  static var hausa = 6;
+
+  List<LangData> langData = [
+    LangData(
+        name: "English",
+        engName: "English",
+        image: "assets/usa.png",
+        current: false,
+        id: english),
+    LangData(
+        name: "German",
+        engName: "Deutsh",
+        image: "assets/ger.png",
+        current: false,
+        id: german),
+    LangData(
+        name: "Spanish",
+        engName: "Spana",
+        image: "assets/esp.png",
+        current: false,
+        id: espanol),
+    LangData(
+        name: "Igbo",
+        engName: "Igbo",
+        image: "assets/nig.png",
+        current: false,
+        id: igbo),
+    LangData(
+        name: "Yoruba",
+        engName: "Yoruba",
+        image: "assets/nig.png",
+        current: false,
+        id: yoruba),
+    LangData(
+        name: "Hausa",
+        engName: "Hausa",
+        image: "assets/nig.png",
+        current: false,
+        id: hausa),
+    // LangData(
+    //     name: "French",
+    //     engName: "French",
+    //     image: "assets/fra.png",
+    //     current: false,
+    //     id: french),
+    // LangData(
+    //     name: "Korean",
+    //     engName: "Korean",
+    //     image: "assets/kor.png",
+    //     current: false,
+    //     id: korean),
+  ];
+
+  Map<int, String> langIgbo = {
+    0: "Mmalite",
+    1: " Distro na-emepere ndị ahịa ya nhọrọ dị iche iche na-eme ka nnyefe dị mfe yana ngwa ngwa.\n\n Ngwa ahụ na-enye"
+        "ịnweta ọrụ nnyefe dị iche iche dị ka igwe kwụ otu ebe, ụgbọ ala, gwongworo na ụgbọ elu. Ngwa anyị karịrị naanị "
+        "Nwepụta nri mana na-enye ọrụ nnyefe ụlọ na-ebuga ihe ọ bụla ị nwere ike ibunye",
+    2: "Otu esi eji ngwa Driver Distro",
+    3: "◉ Mgbe ịbanye na ngwa ahụ, ibe iwu na-ebu ibu, ebe a ị ga-ahụ kọlụm atọ: Ọhụrụ, Active na History.\n"
+        "\n"
+        "◉ Na kọlụm ọhụrụ, a ga-egosi ndepụta nke iwu sitere n'aka admin na ihuenyo gị, wee pịa nabata.\n\n"
+        "◉ ịpị nabata na-eduga gị na ihuenyo nkọwa nkọwa ma ebe a ị nwere ike ịhụ na map na-egosi njem ahụ.\n\n"
+        "◉ Ị nwere ike ịhọrọ ịkpọ onye ahịa ka ị rịọ maka nkọwa ndị ọzọ\n\n"
+        "◉ Laghachi na ibe iwu, ozugbo emechara usoro a nke ọma, pịa zuru ezu iji mechie usoro a.\n\n"
+        "◉ Enwere akara ngosi menu n'ihuenyo ụlọ ebe ị nwere ike imekọrịta ngwa ahụ wee mara ya.",
+    10: "Courrier X Driver",
+    11: "Ịnweghị akaụntụ? Mepụta",
+    12: "Chefuru paswọọdụ",
+    13: "Ka anyị malite na LogIn!",
+    14: "Nbanye",
+    15: "Paswọọdụ",
+    16: "Nbanye",
+    17: "Chefuru paswọọdụ",
+    18: "adreesị ozi-e",
+    19: "Zipu",
+    20: "Mepụta Akaụntụ!",
+    21: "Nbanye",
+    22: "Kwenye okwuntughe",
+    23: "Mepụta akaụntụ",
+    24: "Iwu",
+    25: "Ọkwa",
+    26: "Onye nchịkwa ozi",
+    27: "Akaụntụ",
+    28: "Asụsụ",
+    29: "Pụta",
+    30: "Asụsụ Ngwa",
+    31: "Pọpụnụ",
+    32: "Aha njirimara",
+    33: "E-mail",
+    34: "Ngwaahịa",
+    35: "Ọrụ",
+    36: "Nnyefe",
+    37: "Misc",
+    38: "Onye nchịkwa ozi",
+    39: "Enweghị ọkwa",
+    40: "Nke a bụ ozi dị ezigbo mkpa",
+    41: "Ọhụrụ",
+    42: "Na-arụ ọrụ",
+    43: "Akụkọ",
+    44: "Itụ ID",
+    45: "Ụbọchị",
+    46: "Anya",
+    47: "Na Map",
+    48: "Nabata",
+    49: "km",
+    50: "Enweghị iwu",
+    51: "Ezuola",
+    52: "Aha ndị ahịa",
+    53: "ekwentị ndị ahịa",
+    54: "Kpọọ onye ahịa",
+    55: "Laghachi na iwu",
+    56: "Nkọwa usoro",
+    57: "Subtotal",
+    58: "Ụgwọ ịzụ ahịa",
+    59: "Ụtụ isi",
+    60: "Ngụkọta",
+    61: "Laghachi na Map",
+    62: "Online/n'ịntanetị",
+    63: "ekwentị",
+    64: "Dezie profaịlụ",
+    65: "Chekwa",
+    66: "Kagbuo",
+    67: "Tinye aha njirimara gị",
+    68: "Tinye ozi-e onye ọrụ gị",
+    69: "Tinye ekwentị onye ọrụ",
+    70: "Gbanwee paswọọdụ",
+    71: "Mgbanwe",
+    72: "Password ochie",
+    73: "Tinye paswọọdụ ochie gị",
+    74: "Password ọhụrụ",
+    75: "Tinye paswọọdụ ọhụrụ gị",
+    76: "Kwenye paswọọdụ ọhụrụ",
+    77: "Ụlọ ihe ngosi mepere emepe",
+    78: "igwefoto mepere emepe",
+    79: "Statistics",
+    80: "Egota ego",
+    81: "izu",
+    82: "ọnwa",
+    83: "Enweta ego",
+    84: "Ajụjụ",
+    85: "Ihe kpatara ịjụ",
+    86: "Zipu",
+    87: "Tinye ihe kpatara ya",
+    88: "ebe a",
+    89: "Map",
+    90: "Enyela gị arịrịọ nnyefe",
+    91: "Jisie lelee ngwa gị maka nkọwa ndị ọzọ.",
+  };
+
+  Map<int, String> langYoruba = {
+    0: "Ifihan",
+    1: " Distro ṣi oniruuru awọn aṣayan si awọn onibara rẹ ti nmu awọn ifijiṣẹ rọrun ati yiyara.\n\n Ohun elo naa n funni"
+        "Wiwọle si ọpọlọpọ awọn iṣẹ ifijiṣẹ gẹgẹbi awọn keke, awọn ọkọ ayọkẹlẹ, awọn oko nla ati awọn ọkọ ofurufu. Ohun elo wa ju o kan lọ "
+        "Awọn ifijiṣẹ ounje ṣugbọn o funni ni iṣẹ ifijiṣẹ ile ti n pese ohunkohun ti o le ṣe jiṣẹ",
+    2: "Bi o ṣe le lo Ohun elo Awakọ Distro",
+    3: "◉ Lẹ́yìn tí ẹ bá ti wọlé sínú ìṣàfilọ́lẹ̀ náà, ojú-ewé àṣẹ máa ń gbéraga, níbí, ẹ lè rí àwọn òpó mẹ́ta: Tuntun, Nṣiṣẹ́ àti Ìtàn.\n"
+        "\n"
+        "◉ Lori iwe Tuntun, atokọ ti awọn aṣẹ lati ọdọ alabojuto yoo han loju iboju rẹ, lẹhinna tẹ lori gba.\n\n"
+        "◉ títẹ̀ gba ẹ̀wọ̀n yóò mú ọ lọ sí ojú ìtòlẹ́sẹẹsẹ àwọn ẹ̀kúnrẹ́rẹ́ ìtòlẹ́sẹẹsẹ àti pé níhìn-ín o le wo orí àwòrán ilẹ̀ tí ń fi ìrìn àjò náà hàn.\n\n"
+        "◉ O le yan lati pe onibara lati beere fun awọn alaye diẹ sii\n\n"
+        "◉ Pada si oju-iwe awọn ibere, ni kete ti aṣẹ ba ti pari ni aṣeyọri, tẹ lori Pari lati pa aṣẹ naa.\n\n"
+        "◉ Aami akojọ aṣayan kan wa loju iboju ile nibiti o le ṣe ajọṣepọ pẹlu ohun elo naa ki o si faramọ pẹlu rẹ.\n",
+    10: "Courrier X Driver",
+    11: "Ṣe ko ni akọọlẹ kan? Ṣẹda",
+    12: "Gbagbe ọrọ igbaniwọle",
+    13: "Jẹ ki a bẹrẹ pẹlu LogIn!",
+    14: "Wọle",
+    15: "Ọrọigbaniwọle",
+    16: "Wiwọle",
+    17: "Gbagbe ọrọ igbaniwọle",
+    18: "Adirẹsi imeeli",
+    19: "Firanṣẹ",
+    20: "Ṣẹda akọọlẹ kan!",
+    21: "Wọle",
+    22: "Jẹrisi ọrọ igbaniwọle",
+    23: "ṢẸDA AKỌKỌ",
+    24: "Awọn aṣẹ",
+    25: "Awọn iwifunni",
+    26: "Abojuto Ifiranṣẹ",
+    27: "Account",
+    28: "Awọn ede",
+    29: "Jade",
+    30: "Ede App",
+    31: "Jade",
+    32: "Orukọ olumulo",
+    33: "E-mail",
+    34: "Awọn ọja",
+    35: "Awọn iṣẹ",
+    36: "Ifijiṣẹ",
+    37: "Orisi",
+    38: "Abojuto Ifiranṣẹ",
+    39: "Ko Ni Awọn iwifunni",
+    40: "Eyi jẹ alaye pataki pupọ",
+    41: "Tuntun",
+    42: "Nṣiṣẹ",
+    43: "Itan",
+    44: "ID ibere",
+    45: "Ọjọ",
+    46: " Ijinna",
+    47: "Lori maapu",
+    48: "Gba",
+    49: "km",
+    50: "Ko Ni Awọn aṣẹ",
+    51: "Pari",
+    52: "Orukọ onibara",
+    53: "Foonu onibara",
+    54: "Ipe si Onibara",
+    55: "Pada si Awọn aṣẹ",
+    56: "Awọn alaye aṣẹ",
+    57: "Apapọ",
+    58: "Awọn idiyele rira",
+    59: "Awọn owo-ori",
+    60: "Lapapọ",
+    61: "Pada si Maapu",
+    62: "Lori ayelujara/Aisinipo",
+    63: "Foonu",
+    64: "Ṣatunkọ profaili",
+    65: "Fipamọ",
+    66: "Fagilee",
+    67: "Tẹ Orukọ olumulo rẹ sii",
+    68: "Tẹ imeeli olumulo rẹ sii",
+    69: "Tẹ foonu olumulo rẹ sii",
+    70: "Yi ọrọ igbaniwọle pada",
+    71: "Yipada",
+    72: "Ọrọigbaniwọle atijọ",
+    73: "Tẹ ọrọ igbaniwọle atijọ rẹ sii",
+    74: "Ọrọigbaniwọle titun",
+    75: "Tẹ ọrọ igbaniwọle titun rẹ sii",
+    76: "Jẹrisi ọrọ igbaniwọle Tuntun",
+    77: "Ile-iṣẹ Ṣiṣii",
+    78: "Kamẹra Ṣii",
+    79: "Iṣiro",
+    80: "Awọn owo-owo",
+    81: "ọsẹ",
+    82: "osu",
+    83: "Ti n wọle",
+    84: "Ikọsilẹ",
+    85: "Idi lati Kọ",
+    86: "Firanṣẹ",
+    87: "Wọ Idi",
+    88: "Nibi",
+    89: "Map",
+  };
+
+  Map<int, String> langHausa = {
+    0: "Gabatarwa",
+    1: " Distro yana buɗe zaɓuɓɓuka iri-iri ga abokan cinikin sa suna yin sauƙi da sauri.\n\n App ɗin yana bayarwa"
+        " samun dama ga sabis na isar da kayayyaki iri-iri kamar kekuna, motoci, manyan motoci da jiragen sama. App ɗinmu ya wuce kawai"
+        "Kayan abinci amma yana ba da sabis na isar da gida yana isar da duk abin da za ku iya bayarwa",
+    2: "Yadda ake amfani da Distro Driver App",
+    3: "◉ Bayan ka shiga app din, sai shafin order yayi lodi, anan zaka ga ginshikan uku: Sabo, Active da History.\n"
+        "\n"
+        "◉ A sabon shafi, za a nuna jerin umarni daga admin akan allonku, sannan danna karba.\n\n"
+        "◉ danna karba yana kai ku ga allon bayanan odar kuma anan zaku iya kallo akan taswirar da ke nuna tafiyar.\n\n"
+        "◉ Kuna iya zaɓar kiran abokin ciniki don neman ƙarin cikakkun bayanai\n\n"
+        "◉ Komawa shafin oda, da zarar an kammala odar cikin nasara, danna kan Complete don rufe odar.\n\n"
+        "◉ Akwai gunkin menu akan allon gida inda zaku iya hulɗa da app ɗin kuma ku saba dashi.\n",
+    10: "Courrier X Driver",
+    11: "Ba ku da asusu? Ƙirƙiri",
+    12: "An manta kalmar sirri",
+    13: "Bari mu fara da LogIn!",
+    14: "Shigo",
+    15: "Password",
+    16: "LOGIN",
+    17: "An manta kalmar sirri",
+    18: "Adreshin Imel",
+    19: "Aika",
+    20: "Ƙirƙiri Account!",
+    21: "Shigo",
+    22: "Tabbatar da kalmar wucewa",
+    23: "KI KIRKIRA ACCOUNT",
+    24: "Oda",
+    25: "Sanarwa",
+    26: "Mai Gudanar da Saƙo",
+    27: "Account",
+    28: "harsuna",
+    29: "Shigo",
+    30: "App Language",
+    31: "Fita",
+    32: "Sunan mai amfani",
+    33: "E-mail",
+    34: "Kayayyakin",
+    35: "Sabis",
+    36: "Bayarwa",
+    37: "Misc",
+    38: "Mai Gudanar da Saƙo",
+    39: "Babu Sanarwa",
+    40: "Wannan bayani ne mai mahimmanci",
+    41: "Sabo",
+    42: "Aiki",
+    43: "Tarihi",
+    44: "Oda ID",
+    45: "Kwana",
+    46: "Nisa",
+    47: "A kan Taswira",
+    48: "Ka yarda",
+    49: "km",
+    50: "Babu oda",
+    51: "Kammala",
+    52: "Sunan abokin ciniki",
+    53: "Wayar abokin ciniki",
+    54: "Kira zuwa Abokin ciniki",
+    55: "Koma zuwa oda",
+    56: "Bayanin oda",
+    57: "Subtotal",
+    58: "Kudin siyayya",
+    59: "Haraji",
+    60: "Jimlar",
+    61: "Komawa zuwa Taswira",
+    62: "Kan layi/Kan layi",
+    63: "Wayar",
+    64: "Gyara bayanin martaba",
+    65: "Ajiye",
+    66: "Sake",
+    67: "Shigar da sunan mai amfani",
+    68: "Shigar da imel ɗin mai amfani",
+    69: "Shigar da Wayar Mai Amfani",
+    70: "Canja kalmar sirri",
+    71: "canji",
+    72: "Tsohon kalmar sirri",
+    73: "Shigar da tsohon kalmar sirrinku",
+    74: "Sabon kalmar sirri",
+    75: "Shigar da sabon kalmar sirri",
+    76: "Tabbatar Sabuwar kalmar sirri",
+    77: "Bude Gallery",
+    78: "Buɗe Kamara",
+    79: "Kididdiga",
+    80: "Sabon kuɗi",
+    81: "mako",
+    82: "wata",
+    83: "Cin kuɗi",
+    84: "Kin yarda",
+    85: "Dalilin ƙi",
+    86: "Aika",
+    87: "Shiga Dalili",
+    88: "a nan",
+    89: "Taswira",
+    90: "An sanya muku buƙatun isarwa",
+    91: "Da fatan za a duba app ɗin ku don ƙarin cikakkun bayanai.",
+  };
+
+  Map<int, String> langDeu = {
+    0: "Einführung",
+    1: "Distro eröffnet seinen Kunden eine Vielzahl von Optionen, die Lieferungen einfacher und schneller machen.\n\n Die App bietet"
+        " Zugriff auf eine Vielzahl von Lieferdiensten wie Fahrräder, Autos, Lastwagen und Flugzeuge. Unsere App ist mehr als nur "
+        "Lebensmittellieferungen, bietet aber einen Hauslieferdienst an, der alles liefert, was Sie möglicherweise liefern könnten",
+    2: "So verwenden Sie die Distro Driver App",
+    3: "◉ Nachdem Sie sich in die App eingeloggt haben, wird die Bestellseite geladen, hier sehen Sie drei Spalten: Neu, Aktiv und Historie.\n"
+        "\n"
+        "◉ In der Spalte Neu wird eine Liste mit Bestellungen vom Administrator auf Ihrem Bildschirm angezeigt. Klicken Sie dann auf Akzeptieren.\n\n"
+        "◉ Wenn Sie auf Akzeptieren klicken, gelangen Sie zum Bildschirm Bestelldetails. Hier können Sie auf der Karte die Route anzeigen.\n\n"
+        "◉ Sie können den Kunden anrufen, um weitere Details zu erfragen\n\n"
+        "◉ Zurück zur Bestellseite, sobald die Bestellung erfolgreich abgeschlossen wurde, klicken Sie auf Abschließen, um die Bestellung abzuschließen.\n\n"
+        "◉ Auf dem Startbildschirm befindet sich ein Menüsymbol, über das Sie mit der App interagieren und sich damit vertraut machen können.\n",
+    10: "Courrier X Driver",
+    11: "Sie haben noch kein Konto? Erstellen",
+    12: "Passwort vergessen",
+    13: "Beginnen wir mit LogIn!",
+    14: "Login",
+    15: "Passwort",
+    16: "LOGIN",
+    17: "Passwort vergessen",
+    18: "E-Mail-Adresse",
+    19: "SENDEN",
+    20: "Konto erstellen!",
+    21: "Login",
+    22: "Passwort bestätigen",
+    23: "KONTO ERSTELLEN",
+    24: "Bestellungen",
+    25: "Benachrichtigungen",
+    26: "Hilfe & Support",
+    27: "Konto",
+    28: "Sprachen",
+    29: "Abmelden",
+    30: "App Language",
+    31: "Abmelden",
+    32: "Benutzername",
+    33: "E-Mail",
+    34: "Produkte",
+    35: "Dienstleistungen",
+    36: "Lieferung",
+    37: "Verschiedenes",
+    38: "Hilfe & Support",
+    39: "Keine Benachrichtigungen haben",
+    40: "Wischen Sie die Benachrichtigung nach links, um sie zu löschen",
+    41: "Neu",
+    42: "Aktiv",
+    43: "Geschichte",
+    44: "Bestellnummer",
+    45: "Datum",
+    46: "Entfernung",
+    47: "Auf Karte",
+    48: "Akzeptieren",
+    49: "km",
+    50: "Keine Bestellungen haben",
+    51: "Vollständig",
+    52: "Kundenname",
+    53: "Kundentelefon",
+    54: "Anruf beim Kunden",
+    55: "Zurück zu Bestellungen",
+    56: "Bestelldetails",
+    57: "Zwischensumme",
+    58: "Einkaufskosten",
+    59: "Steuern",
+    60: "Gesamt",
+    61: "Zurück zur Karte",
+    62: "Online / Offline",
+    63: "Telefon",
+    64: "Profil bearbeiten",
+    65: "Speichern",
+    66: "Abbrechen",
+    67: "Geben Sie Ihren Benutzernamen ein",
+    68: "Geben Sie Ihre Benutzer-E-Mail-Adresse ein",
+    69: "Geben Sie Ihr Benutzertelefon ein",
+    70: "Passwort ändern",
+    71: "Ändern",
+    72: "Altes Passwort",
+    73: "Geben Sie Ihr altes Passwort ein",
+    74: "Neues Passwort",
+    75: "Geben Sie Ihr neues Passwort ein",
+    76: "Neues Passwort bestätigen",
+    77: "Galerie öffnen",
+    78: "Kamera öffnen",
+    79: "Statistik",
+    80: "Einnahmen",
+    81: "Woche",
+    82: "Monat",
+    83: "Verdienen",
+    84: "Ablehnung",
+    85: "Grund zur Ablehnung",
+    86: "Senden",
+    87: "Grund eingeben",
+    88: "hier",
+    89: "Karte",
+    90: "Ihnen wurde eine Lieferanforderung zugewiesen",
+    91: "Bitte überprüfen Sie Ihre App auf weitere Details.",
+  };
+
+  Map<int, String> langEsp = {
+    0: "Introducción",
+    1: "Distro abre una variedad de opciones a sus clientes haciendo que las entregas sean más fáciles y rápidas.\n\n La aplicación ofrece"
+        " acceda a una variedad de servicios de entrega como bicicletas, automóviles, camiones y aviones. Nuestra aplicación es más que solo "
+        "entregas de alimentos pero ofrece servicio de entrega a domicilio entregando cualquier cosa que pueda entregar",
+    2: "Cómo usar la aplicación Distro Driver",
+    3: "◉ Después de iniciar sesión en la aplicación, se carga la página de pedidos, aquí puede ver tres columnas: Nuevo, Activo e Historial.\n"
+        "\norte"
+        "◉ En la columna Nuevo, se mostrará una lista de pedidos del administrador en su pantalla, luego haga clic en aceptar.\n\n"
+        "◉ Al hacer clic en aceptar, se accede a la pantalla de detalles del pedido y aquí se puede ver en el mapa que muestra el viaje.\n\n"
+        "◉ Puede optar por llamar al cliente para solicitar más detalles\n\n"
+        "◉ Volver a la página de pedidos, una vez que el pedido se haya completado con éxito, haga clic en Completar para cerrar el pedido.\n\n"
+        "◉ Hay un ícono de menú en la pantalla de inicio donde puedes interactuar con la aplicación y familiarizarte con ella.\n",
+    10: "Courrier X Driver",
+    11: "¿No tienes una cuenta? Crear",
+    12: "Contraseña olvidada",
+    13: "¡Empecemos con Iniciar sesión!",
+    14: "Iniciar sesión",
+    15: "Contraseña",
+    16: "INICIAR SESIÓN",
+    17: "Contraseña olvidada",
+    18: "Dirección de correo electrónico",
+    19: "ENVIAR",
+    20: "¡Crea una cuenta!",
+    21: "Iniciar sesión",
+    22: "Confirmar contraseña",
+    23: "CREAR CUENTA",
+    24: "Pedidos",
+    25: "Notificaciones",
+    26: "Ayuda y soporte técnico",
+    27: "Cuenta",
+    28: "Idiomas",
+    29: "Cerrar sesión",
+    30: "Idioma de la aplicación",
+    31: "Cerrar sesión",
+    32: "Nombre de usuario",
+    33: "Correo electrónico",
+    34: "Productos",
+    35: "Servicios",
+    36: "Entrega",
+    37: "Varios",
+    38: "Ayuda y soporte",
+    39: "No tener notificaciones",
+    40: "Desliza hacia la izquierda la notificación para eliminarla",
+    41: "Nuevo",
+    42: "Activo",
+    43: "Historia",
+    44: "ID de pedido",
+    45: "Fecha",
+    46: "Distancia",
+    47: "En el mapa",
+    48: "Aceptar",
+    49: "km",
+    50: "No tener pedidos",
+    51: "Completo",
+    52: "Nombre del cliente",
+    53: "Teléfono del cliente",
+    54: "Llamar al cliente",
+    55: "Volver a pedidos",
+    56: "Detalles del pedido",
+    57: "Subtotal",
+    58: "Costos de compra",
+    59: "Impuestos",
+    60: "Total",
+    61: "Volver al mapa",
+    62: "En línea / Fuera de línea",
+    63: "Teléfono",
+    64: "Editar perfil",
+    65: "Guardar",
+    66: "Cancelar",
+    67: "Introduzca su nombre de usuario",
+    68: "Introduzca su correo electrónico de usuario",
+    69: "Ingrese su teléfono de usuario",
+    70: "Cambiar contraseña",
+    71: "Cambiar",
+    72: "Contraseña anterior",
+    73: "Ingrese su contraseña anterior",
+    74: "Nueva contraseña",
+    75: "Ingrese su nueva contraseña",
+    76: "Confirmar nueva contraseña",
+    77: "Abrir galería",
+    78: "Cámara abierta",
+    79: "Estadísticas",
+    80: "Ingresos",
+    81: "semana",
+    82: "mes",
+    83: "Ganancia",
+    84: "Rechazo",
+    85: "Razón para rechazar",
+    86: "Enviar",
+    87: "Ingrese el motivo",
+    88: "aquí",
+    89: "Mapa",
+    90: "Se le ha asignado una solicitud de entrega",
+    91: "Por favor revise su aplicación para obtener más detalles"
+  };
+
+  Map<int, String> langEng = {
+    0: "Introduction",
+    1: " Distro opens a variety of options to its customers making deliveries easier and faster.\n\n The app gives"
+        " access to a variety of delivery services such as bikes, cars, trucks and planes. Our app is more than just "
+        "food deliveries but offers home delivery service delivering anything you could possibly deliver",
+    2: "How to use the Distro Driver App",
+    3: "◉ After you login into the app, the orders page loads up, here you can see three columns: New, Active and History.\n"
+        "\n"
+        "◉ On the New column, a list of orders from admin would be shown on your screen, then click on accept.\n\n"
+        "◉ clicking on accept takes you to the Order details screen and here you can view on the map showing the journey.\n\n"
+        "◉ You may choose to call the customer to ask for more details\n\n"
+        "◉ Back to the orders page, once the order has been completed successfully, click on Complete to close the order.\n\n"
+        "◉ There's a menu icon on the home screen where you can interact with the app and get familiar with it.\n",
+    10: "Courier X Driver",
+    11: "Don't have an account? Create",
+    12: "Forgot password",
+    13: "Let's start with LogIn!",
+    14: "Login",
+    15: "Password",
+    16: "LOGIN",
+    17: "Forgot password",
+    18: "E-mail address",
+    19: "SEND",
+    20: "Create an Account!",
+    21: "Login",
+    22: "Confirm Password",
+    23: "CREATE ACCOUNT",
+    24: "Orders",
+    25: "Notifications",
+    26: "Message Admin",
+    27: "Account",
+    28: "Languages",
+    29: "Sign Out",
+    30: "App Language",
+    31: "Log Out",
+    32: "User Name",
+    33: "E-mail",
+    34: "Products",
+    35: "Services",
+    36: "Delivery",
+    37: "Misc",
+    38: "Message Admin",
+    39: "Not Have Notifications",
+    40: "This is very important information",
+    41: "New",
+    42: "Active",
+    43: "History",
+    44: "Order ID",
+    45: "Date",
+    46: "Distance",
+    47: "On Map",
+    48: "Accept",
+    49: "km",
+    50: "No Orders",
+    51: "Complete",
+    52: "Customer name",
+    53: "Customer phone",
+    54: "Call to Customer",
+    55: "Back to Orders",
+    56: "Order Details",
+    57: "Subtotal",
+    58: "Shopping costs",
+    59: "Taxes",
+    60: "Total",
+    61: "Back to Map",
+    62: "Online/Offline",
+    63: "Phone",
+    64: "Edit profile",
+    65: "Save",
+    66: "Cancel",
+    67: "Enter your User Name",
+    68: "Enter your User E-mail",
+    69: "Enter your User Phone",
+    70: "Change password",
+    71: "Change",
+    72: "Old password",
+    73: "Enter your old password",
+    74: "New password",
+    75: "Enter your new password",
+    76: "Confirm New password",
+    77: "Open Gallery",
+    78: "Open Camera",
+    79: "Statistics",
+    80: "Earnings",
+    81: "week",
+    82: "month",
+    83: "Earning",
+    84: "Rejection",
+    85: "Reason to Reject",
+    86: "Send",
+    87: "Enter Reason",
+    88: "here",
+    89: "Map",
+    90: "A ti yan ibeere ifijiṣẹ fun ọ",
+    91: "Jọwọ ṣayẹwo app rẹ fun awọn alaye diẹ sii.",
+  };
+
+  //
+  //
+  //
+  setLang(int id) {
+    if (id == english) {
+      defaultLang = langEng;
+      init = true;
+    }
+    if (id == german) {
+      defaultLang = langDeu;
+      init = true;
+    }
+    if (id == espanol) {
+      defaultLang = langEsp;
+      init = true;
+    }
+    if (id == igbo) {
+      defaultLang = langIgbo;
+      init = true;
+    }
+    if (id == yoruba) {
+      defaultLang = langYoruba;
+      init = true;
+    }
+    if (id == hausa) {
+      defaultLang = langHausa;
+      init = true;
+    }
+    for (var lang in langData) {
+      lang.current = false;
+      if (lang.id == id) lang.current = true;
+    }
+  }
+
+  Map<int, String>? defaultLang;
+  var init = false;
+
+  String get(int id) {
+    if (!init) return "";
+    return defaultLang![id] ?? '';
+  }
+}
